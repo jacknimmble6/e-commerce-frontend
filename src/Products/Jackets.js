@@ -46,7 +46,7 @@ const Jackets = () => {
                   {product.category}
                 </p>
                 <p className="left-[35px] mt-8 top-[468px] text-[36px]">
-                  Price: Price: {Intl.NumberFormat('en-IN', {  style: 'currency', currency: 'USD', maximumSignificantDigits: 3 })
+                  Price: {Intl.NumberFormat('en-IN', {  style: 'currency', currency: 'USD', maximumSignificantDigits: 3 })
                   .format(product.price)}
                 </p>
               </div>
