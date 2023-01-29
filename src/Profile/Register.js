@@ -78,7 +78,7 @@ const Register = () => {
   }
 
   return (
-    <div className="absolute top-[150px] left-[390px] w-[700px] font-['Sora']
+    <div className="absolute top-[150px] left-[390px] 2xl:left-[600px] w-[700px] font-['Sora']
      h-[950px] border-2 border-black">
       <p className='absolute text-[45px] left-[260px]'>Sign Up</p>
       <p className='absolute left-[150px] text-[30px] top-[70px] text-green-400'>{flash}</p>

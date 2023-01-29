@@ -16,7 +16,7 @@ const Login = () => {
   const [flash, setFlash] = useState(false)
   const [flashStyle, setFlashStyle] = useState('')
   const dispatch = useDispatch()
-  const role1 = useSelector(state => state.user.token)
+  const id = useSelector(state => state.user.id)
 
   const changeRole = (e) => {
     setRole(e.target.value)
@@ -68,10 +68,7 @@ const Login = () => {
       }})
       })
       setTimeout(() => {
-        if (role1 === '') {
-          setFlash(`Your login credentials are invalid!!`)
-          setFlashStyle('absolute left-[150px] text-[30px] top-[70px] text-red-400')
-        } else {
+        if (id !== '') {
           setFlash(`You logged in as ${username}!!`)
           setFlashStyle('absolute left-[150px] text-[30px] top-[70px] text-green-400')
         }
@@ -85,7 +82,7 @@ const Login = () => {
   }
 
   return (
-    <div className="font-['Sora'] absolute top-[150px] left-[370px] w-[700px] h-[870px] 
+    <div className="font-['Sora'] 2xl:left-[570px] absolute top-[150px] left-[370px] w-[700px] h-[870px] 
     border-2 border-black">
       <p className={flashStyle}>{flash}</p>
       <p className='absolute text-[45px] left-[300px]'>Login</p>

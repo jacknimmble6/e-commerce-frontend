@@ -20,13 +20,13 @@ const Sneaker = ({ handleLoaded1 }) => {
 
   return (
     <div className="grid grid-cols-3 xs:grid-cols-1 absolute top-[610px] w-full h-[1302px] font-['Sora']">
-      <p className="absolute left-[667px] xs:left-[130px] text-[36px] top-[-76px] font-['Sora']">Sneakers</p>
+      <p className="absolute left-[667px] xs:left-[130px] text-[36px] 2xl:left-[770px] top-[-76px] font-['Sora']">Sneakers</p>
       <div className='grid grid-cols-3 xs:grid-cols-1 absolute gap-2 xs:left-0 h-[1193px] left-[67px] top-[59px] -ml-[30px]'>
         {sneakers.slice(0,6).map(sneaker => (
-          <div className="w-[390px] h-fit left-[7px] top-[-54px] ml-16 xs:mt-8 xs:w-[340px] xs:ml-16
+          <div className="w-[390px] 2xl:ml-4 2xl:w-[510px] h-fit left-[7px] top-[-54px] ml-16 xs:mt-8 xs:w-[340px] xs:ml-16
           font-['Sora'] bg-white shadow-[4px_4px_4px_4px_rgba(0,0,0,0.35)]" key={sneaker._id}>
             <Link to={`/product/detail/${sneaker._id}`}>
-            <img src={sneaker.images[0]} alt='' className="w-[390px] xs:w-[340px] h-[275px] object-cover"/>
+            <img src={sneaker.images[0]} alt='' className="w-[390px] 2xl:w-[510px] xs:w-[340px] h-[275px] object-cover"/>
             <div className='text-center mt-8'>
               <p className="left-[81px] top-[330px] text-[30px]">{sneaker.name}</p>
               <p className="top-[390px] left-[90px] mt-8 text-[30px] text-[rgba(0,0,0,0.5)]">
@@ -41,7 +41,7 @@ const Sneaker = ({ handleLoaded1 }) => {
         ))}
       </div>
       <Link to='/sneakers'>
-        <p className="absolute top-[1250px] xs:top-[3450px] xs:left-[120px] left-[667px] text-[36px]">See All</p>
+        <p className="absolute top-[1250px] 2xl:left-[770px] xs:top-[3450px] xs:left-[120px] left-[667px] text-[36px]">See All</p>
       </Link>
     </div>
   )

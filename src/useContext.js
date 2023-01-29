@@ -29,7 +29,6 @@ const MyContextProvider = ({ children }) => {
 
   const handleSearch = (e) => {
     setSearch(e.target.value)
-    console.log(e.target.value)
   }
 
   const handlePriceRange = (e) => {

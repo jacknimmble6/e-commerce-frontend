@@ -43,37 +43,47 @@ const Navbar = () => {
       </p>
 
       <Link to='/'>
-        <p className="absolute top-[36px] left-[325px] text-[25px] 
+        <p className="absolute top-[36px] left-[325px] text-[25px] 2xl:left-[380px]
         font-['Sora'] leading-[14px]">
           Home
         </p>
       </Link>
       
       <Link to='/allProducts'>
-        <p className="absolute top-[36px] left-[485px] w-[185px] 
+        <p className="absolute top-[36px] left-[485px] 2xl:left-[590px] w-[185px] 
         text-[25px] font-['Sora'] leading-[14px]">
           All Products
         </p>
       </Link>
 
-      <input className="absolute top-[30px] left-[753px] w-[196px] border-[1px] border-solid 
+      <input className="absolute top-[30px] left-[753px] 2xl:left-[920px] w-[196px] border-[1px] border-solid 
       border-black box-border" value={search} onChange={handleSearch} onKeyPress={startSearch} />
 
       <Link to='/cart'>
-        <Icon icon="bx:bx-cart" width="51" height="35" className="absolute left-[1074px] 
+        <Icon icon="bx:bx-cart" width="51" height="35" className="absolute left-[1074px] 2xl:left-[1340px]
         right-[16.32%] top-[25px] bottom-[29.11%]" />
-        <p className='absolute left-[1120px] top-[30px] text-[20px]'>
+        <p className='absolute left-[1120px] 2xl:left-[1380px] top-[30px] text-[20px]'>
           ({reduxCart === [] ? 0 : reduxCart.length})
         </p>
       </Link>
+
+      {
+        user === '' ? (
+          <Link to='/register'>
+            <Icon icon="vs:profile" width="51" height="35" className="absolute left-[1324px] 2xl:left-[1600px]
+            right-[16.32%] top-[25px] bottom-[29.11%]" onMouseEnter={showButton} />
+          </Link>
+        ) : (
+          <Link to='/profile'>
+            <Icon icon="vs:profile" width="51" height="35" className="absolute left-[1324px] 2xl:left-[1600px]
+            right-[16.32%] top-[25px] bottom-[29.11%]" onMouseEnter={showButton} />
+          </Link>
+        )
+      }
       
-      <Link to='/profile'>
-        <Icon icon="vs:profile" width="51" height="35" className="absolute left-[1324px] 
-        right-[16.32%] top-[25px] bottom-[29.11%]" onMouseEnter={showButton} />
-      </Link>
 
       {user !== '' && show === true ?
-        <button className='absolute top-[25px] left-[1400px] text-[25px] w-[100px]' onClick={logout} onMouseLeave={hideButton}>
+        <button className='absolute top-[25px] 2xl:left-[1450px] left-[1400px] text-[25px] w-[100px]' onClick={logout} onMouseLeave={hideButton}>
           Log Out
         </button>
         : ''

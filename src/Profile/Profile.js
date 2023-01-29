@@ -122,8 +122,8 @@ const Profile = () => {
         </form>
       </div>
 
-      <div className="font-['Sora'] ml-40">
-        <p className='absolute top-[207px] left-[1045px] text-[35px]'>
+      <div className="font-['Sora'] ml-40 2xl:ml-96">
+        <p className='absolute top-[207px] left-[1045px] 2xl:left-[1270px] text-[35px]'>
           Orders
         </p>
 

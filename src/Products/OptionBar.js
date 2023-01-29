@@ -52,7 +52,8 @@ const OptionBar = () => {
       </>
 
       <div>
-        <select className="absolute top-[677px] left-[1120px] text-[25px]" value={sort} onChange={handleSort}>
+        <select className="absolute top-[677px] 2xl:left-[1380px] left-[1120px] 
+        text-[25px]" value={sort} onChange={handleSort}>
           <option value='A-Z'>Order from A-Z</option>
           <option value='Z-A'>Order from Z-A</option>
           <option value='Order By Price'>Order By Price</option>

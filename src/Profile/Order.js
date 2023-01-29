@@ -18,7 +18,7 @@ const Order = () => {
 
   return (
     <>
-      <div className="mt-40 ml-16 container mx-auto w-[1300px] h-fit border-2 
+      <div className="mt-40 ml-16 container 2xl:ml-48 mx-auto w-[1300px] h-fit border-2 
       border-black font-['Sora']">
         <p className='text-[35px] underline'>Full Name</p>
         <p className='text-[35px]'>{`${order.firstName} ${order.lastName}`}</p>

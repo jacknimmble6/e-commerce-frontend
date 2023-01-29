@@ -31,7 +31,7 @@ const Home = () => {
   }
 
   useEffect(() => {
-    handleLoaded()
+    handleLoaded(false)
   })
 
   return (

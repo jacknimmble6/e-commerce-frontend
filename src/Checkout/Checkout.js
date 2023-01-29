@@ -81,6 +81,10 @@ const Checkout = () => {
     return prev + current.price * current.amount
   }, 0)
 
+  const delete2 = (id) => {
+    dispatch({ type: 'delete1', payload: id })
+  }
+
   const handleSubmit = () => {
     dispatch({ type: 'setOrder', payload: { 
       firstName, lastName, city, address, zipCode, country, region, 
@@ -91,13 +95,13 @@ const Checkout = () => {
 
   return (
     <>
-      <div className='absolute top-[90px] left-[290px]'>
+      <div className='absolute top-[90px] left-[290px] 2xl:left-[425px]'>
         <CheckoutNav />
       </div>
       
       <div className="grid grid-cols-2 font-['Sora']">
 
-        <div className='absolute border-2 border-black top-48 left-[60px] h-[920px] w-[660px]'>
+        <div className='absolute border-2 border-black 2xl:left-[200px] top-48 left-[60px] h-[920px] w-[660px]'>
           <p className='absolute text-[36px] left-[94px] top-[20px]'>Contact Information</p>
           <p className='absolute text-[25px] text-center top-[80px]'>
             {firstName1} {lastName1} ({email})
@@ -148,7 +152,7 @@ const Checkout = () => {
         </div>
       </div>
 
-      <div className="absolute border-2 font-['Sora'] border-black top-48 
+      <div className="absolute border-2 font-['Sora'] border-black top-48 2xl:left-[860px] 
       left-[719px] h-[920px] w-[660px]">
 
         <div className='-mt-8'>
@@ -161,7 +165,6 @@ const Checkout = () => {
                 style: 'currency', currency: 'USD', maximumSignificantDigits: 3 
                 }).format(c.amount * c.price)}
               </p>
-              <p className='ml-40 text-[20px] underline mt-0'>Remove</p>
             </div>
           ))}
         </div>

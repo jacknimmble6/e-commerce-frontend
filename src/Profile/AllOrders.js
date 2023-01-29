@@ -23,7 +23,7 @@ const AllOrders = () => {
       <p className='text-[50px] text-center mt-32'>All Orders</p>
       <div className='mt-[50px] -ml-[550px] m-auto'>
       {orders.map((order, index) => (
-        <div className='w-[1160px] border-2 border-black h-fit ml-[700px] 
+        <div className='w-[1160px] border-2 border-black h-fit ml-[700px] 2xl:ml-[840px] 
         mt-[100px] m-auto' key={index}>
           <p className='text-[30px] underline'>Order #{index + 1}</p>
           <Link to={`/order/${order._id}`}>
